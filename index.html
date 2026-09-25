@@ -598,6 +598,7 @@ input[type="file"].inp{padding:8px 10px}
     temaBtn.setAttribute('aria-label', escuro ? 'Mudar para tema claro' : 'Mudar para tema escuro');
     temaBtn.title = temaBtn.getAttribute('aria-label');
   }
+  root.dataset.theme = 'light';
   try { const t = localStorage.getItem('co-tema'); if (t === 'dark' || t === 'light') root.dataset.theme = t; } catch(e){}
   temaBtn.addEventListener('click', () => {
     const novo = temaAtual() === 'dark' ? 'light' : 'dark';
